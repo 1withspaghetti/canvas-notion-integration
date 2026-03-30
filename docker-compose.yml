@@ -1,0 +1,10 @@
+services:
+  sync-task:
+    build: .
+    environment:
+      - CANVAS_API_URL=${CANVAS_API_URL:?}
+      - CANVAS_API_TOKEN=${CANVAS_API_TOKEN:?}
+      - NOTION_API_TOKEN=${NOTION_API_TOKEN:?}
+      - NOTION_TASK_DATA_SOURCE_ID=${NOTION_TASK_DATA_SOURCE_ID:?}
+      - NOTION_COURSE_DATA_SOURCE_ID=${NOTION_COURSE_DATA_SOURCE_ID:?}
+    restart: no
