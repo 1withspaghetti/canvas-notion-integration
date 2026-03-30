@@ -35,4 +35,5 @@ USER node
 # Copy the rest of the source files into the image.
 COPY . .
 
-CMD [ "pnpm", "run", "sync" ]
+# Keep container running
+CMD [ "sleep", "infinity" ]
