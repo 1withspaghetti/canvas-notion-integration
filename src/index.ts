@@ -43,9 +43,9 @@ for (const course of courses) {
             },
             "Due date": {
                 type: "date",
-                date: {
-                    start: assignment.due_at?.replace("T07:59:59Z", "") || new Date(Date.now() - (new Date().getTimezoneOffset() * 60000 )).toISOString().split("T")[0]
-                }
+                date: assignment.due_at != null ? {
+                    start: assignment.due_at.replace("T07:59:59Z", "")
+                } : null
             },
             "Canvas ID": {
                 type: "number",
