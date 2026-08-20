@@ -7,4 +7,4 @@ services:
       - NOTION_API_TOKEN=${NOTION_API_TOKEN:?}
       - NOTION_TASK_DATA_SOURCE_ID=${NOTION_TASK_DATA_SOURCE_ID:?}
       - NOTION_COURSE_DATA_SOURCE_ID=${NOTION_COURSE_DATA_SOURCE_ID:?}
-    restart: no
+    restart: unless-stopped
