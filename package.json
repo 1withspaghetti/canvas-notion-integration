@@ -8,8 +8,8 @@
     "dev": "node src/index.ts",
     "dev-cron": "node src/cron.ts",
     "build": "tsc",
-    "sync": "node dest/index.js",
-    "start": "node dest/cron.js"
+    "sync": "node dist/index.js",
+    "start": "node dist/cron.js"
   },
   "keywords": [],
   "author": "",

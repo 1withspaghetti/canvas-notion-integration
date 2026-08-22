@@ -21,8 +21,7 @@ export async function getCoursePageIdFromCourseCode(courseCode: string): Promise
                 contains: courseCode
             }
         },
-        page_size: 1,
-        in_trash: false
+        page_size: 1
     });
     
     const pages = res.results.filter(r=>r.object === 'page');
@@ -39,8 +38,7 @@ export async function getAssignmentPageIdFromCanvasAssignmentId(assignmentId: nu
                 equals: assignmentId
             }
         },
-        page_size: 1,
-        in_trash: false
+        page_size: 1
     });
     
     const pages = res.results.filter(r=>r.object === 'page');
